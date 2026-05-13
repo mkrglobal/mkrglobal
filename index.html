@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover">
+  <title>MKR Global | Web3 Donations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div id="monad-splash-screen" class="giveth-hero-section">
+    <div class="hero-top-nav">
+      <span class="glitch-title" style="font-size: 20px;">MKR Global</span>
+      <div class="hero-network-status">
+        <span class="status-indicator">●</span> Multi-Chain Mainnet
+      </div>
+    </div>
+    
+    <div class="hero-main-content">
+      <div class="hero-glow-bg"></div>
+      
+      <div class="splash-logo-container">
+        <img src="cat_dev.jpg" alt="Web3 Cat Dev" class="big-monad-logo">
+      </div>
+      
+      <div class="hero-text-wrapper">
+        <h4 class="hero-title">A borderless <span class="highlight-green">Web3</span> Initiative.</h4>
+        <p class="hero-subtitle">Support natural elements and fundamental human rights . With 100% cryptographic transparency.</p>
+        
+        <div class="hero-action-row">
+          <button id="initiate-btn" class="primary-hero-btn">Explore MKR Global ➔</button>
+        </div>
+      </div>
+
+      <div class="hero-stats-container">
+        <div class="stat-box">
+          <span class="stat-value">$10k+</span>
+          <span class="stat-label">Total Raised</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-box">
+          <span class="stat-value">11</span>
+          <span class="stat-label">Verified Causes</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-box">
+          <span class="stat-value">0%</span>
+          <span class="stat-label">Platform Fees</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dashboard-window" class="hidden-screen">
+    <div id="monad-title-bar">
+      <div class="app-header-left">
+        <span id="back-to-splash-btn" title="Return">❮</span>
+        <span class="glitch-title">MKR Global</span>
+      </div>
+      <div class="app-header-right header-controls">
+        <div id="wallet-connected-group" class="hidden-element">
+          <span id="wallet-address-display" class="wallet-badge" title="Connected Address"></span>
+          <button id="disconnect-wallet-btn" class="header-action-btn disconnect-btn">Disconnect</button>
+        </div>
+        <button id="header-donate-btn" class="header-action-btn">Donate Now</button>
+      </div>
+    </div>
+    
+    <div id="dashboard-content">
+      <div class="discovery-section">
+        <div class="search-bar-container">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="project-search" placeholder="Search causes, elements, or rights...">
+        </div>
+        <div class="category-tabs">
+          <button class="filter-tab active" data-filter="all">All Causes</button>
+          <button class="filter-tab" data-filter="nature">🌱 Nature</button>
+          <button class="filter-tab" data-filter="humanity">🤝 Humanity</button>
+        </div>
+      </div>
+
+      <div class="impact-gallery-container">
+        <div id="nature-impact-card" class="impact-card" style="animation-delay: 0.1s; cursor: pointer;">
+          <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Restoring Nature">
+          <div class="impact-overlay">
+            <h3>🌱 Restoring Nature</h3>
+            <p>Healing the earth, one transaction at a time.</p>
+          </div>
+        </div>
+        <div id="humanity-impact-card" class="impact-card" style="animation-delay: 0.2s; cursor: pointer;">
+          <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80" alt="Empowering Humanity">
+          <div class="impact-overlay">
+            <h3>🤝 Empowering Humanity</h3>
+            <p>Direct, borderless aid to those who need it most.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="portrait-section" style="margin-top: 10px;">
+        <h2 class="section-title" id="dynamic-section-title">Explore Verified Causes</h2>
+        <div class="grid-container" id="projects-grid">
+        </div>
+      </div>
+
+      <div class="portrait-section nft-section-wrapper">
+        <h2 class="section-title nft-title-glow">Why Donate On MKR Global? <br> A borderless Web3 initiative.</h2>
+        <p class="nft-section-desc">
+          <br> <br> <b> attention 📌, for security purposes - the progress bars on the site update once a day at 00:00 PM UTC, so don't worry if you don't see your donation immediately reflected on the visual tracker!</b> <br> <br> 
+          - The world is becoming too centralized <br> <br> - Humanity and Nature are suffering immensely from global crises<br> <br>  - MKR Global bridges Web3 technology with real-world impact across major networks like Ethereum, BNB, Polygon, Base, and Monad <br> <br>  - We assist humans with fundamental needs and support nature via preservation and restoration
+          <br> <br> 
+          - We publish donation and distribution histories every week on Friday <br> <br> 
+         - By using decentralized networks, your contribution goes directly to the destination. Zero intermediaries, zero hidden fees, absolute cryptographic transparency.
+        <br>
+        </p>
+      </div>
+
+     <div class="portrait-section treasury-section-wrapper">
+      <div class="treasury-header-row">
+        <span class="status-indicator">●</span>
+        <h2 class="section-title treasury-title-glow" style="border-bottom: none; margin: 0; padding: 0;">Live Treasury Tracking</h2>
+      </div>
+      
+      <p class="treasury-desc">
+        100% Cryptographic Transparency. All MKR Global donations are routed to our central, publicly auditable treasury wallet. Track every inbound donation and outbound distribution in real-time across all supported networks.
+      </p>
+
+      <div class="treasury-wallet-display">
+        <span class="wallet-label">MKR Global Master Vault:</span>
+        <div class="wallet-address-box">
+          <span id="treasury-address">0x7811334586e85540f1DAE69780dEA0Db7bb45838</span>
+          <button class="copy-wallet-btn" onclick="navigator.clipboard.writeText('0x7811334586e85540f1DAE69780dEA0Db7bb45838'); alert('Treasury address copied to clipboard!')">📋 Copy</button>
+        </div>
+      </div>
+
+      <p class="treasury-desc" style="margin-top: 15px; margin-bottom: 10px; font-weight: bold; color: #fff;">
+       On-Chain Ledgers :
+      </p>
+
+      <div class="explorer-grid">
+        <a href="https://etherscan.io/address/0x7811334586e85540f1DAE69780dEA0Db7bb45838" target="_blank" class="explorer-link-btn">
+          <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/info/logo.png" alt="Etherscan" class="explorer-icon">
+          Etherscan
+        </a>
+        <a href="https://bscscan.com/address/0x7811334586e85540f1DAE69780dEA0Db7bb45838" target="_blank" class="explorer-link-btn">
+          <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/info/logo.png" alt="BscScan" class="explorer-icon">
+          BscScan
+        </a>
+        <a href="https://polygonscan.com/address/0x7811334586e85540f1DAE69780dEA0Db7bb45838" target="_blank" class="explorer-link-btn">
+          <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/polygon/info/logo.png" alt="Polygonscan" class="explorer-icon">
+          Polygonscan
+        </a>
+        <a href="https://basescan.org/address/0x7811334586e85540f1DAE69780dEA0Db7bb45838" target="_blank" class="explorer-link-btn">
+          <img src="https://avatars.githubusercontent.com/u/108554348?v=4" alt="BaseScan" class="explorer-icon">
+          BaseScan
+        </a>
+        <a href="https://monadscan.com/address/0x7811334586e85540f1DAE69780dEA0Db7bb45838" target="_blank" class="explorer-link-btn">
+          <img src="https://avatars.githubusercontent.com/monad-developers" alt="Monad Explorer" class="explorer-icon">
+          Monad Explorer
+        </a>
+      </div>
+    </div>
+      
+      <div class="footer-section">
+        <p class="footer-title">Connect with MKR Global</p>
+        <div class="social-links">
+          <a href="https://x.com/@mkrglobal" target="_blank" rel="noopener noreferrer" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://github.com/MKRWeb" target="_blank" rel="noopener noreferrer" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/mkr-web" target="_blank" rel="noopener noreferrer" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="mailto:mkrglobal247@gmail.com" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="info-modal" class="modal-overlay hidden-modal">
+    <div class="modal-content info-content">
+      <span class="close-modal" id="close-info-modal">&times;</span>
+      <div class="modal-header">
+        <img id="modal-image" class="glowing-image-purple" src="" alt="Element Image">
+        <h2 id="modal-title">Title</h2>
+      </div>
+      <div class="modal-body">
+        <div class="info-section">
+          <h3>Description</h3>
+          <p id="modal-desc"></p>
+        </div>
+        <div class="info-section">
+          <h3 id="modal-sec1-title">Usage</h3>
+          <p id="modal-sec1-desc"></p>
+        </div>
+        <div class="info-section">
+          <h3 id="modal-sec2-title">Issues</h3>
+          <p id="modal-sec2-desc"></p>
+        </div>
+        <div class="info-section">
+          <h3 id="modal-sec3-title">Solutions</h3>
+          <p id="modal-sec3-desc"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="donation-modal" class="modal-overlay hidden-modal">
+    <div class="modal-content donation-content">
+      <span class="close-modal" id="close-donation-modal">&times;</span>
+      
+      <div class="donation-header">
+        <h2 id="donation-target-name">Support: </h2>
+        <p>Your funds will be routed securely via Web3.</p>
+      </div>
+      
+      <div class="donation-body">
+        <div class="input-group">
+          <label>Select Network</label>
+          <div class="amount-wrapper" style="margin-bottom: 15px;">
+            <select id="donation-network" class="network-dropdown">
+              <option value="0x8f">Monad Mainnet</option>
+              <option value="0x38">BNB Smart Chain</option>
+              <option value="0x1">Ethereum Mainnet</option>
+              <option value="0x89">Polygon (POS)</option>
+              <option value="0x2105">Base Network</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label>Donation Amount & Asset</label>
+          <div class="amount-wrapper">
+            <input type="text" id="donation-amount" placeholder="0.00" inputmode="decimal">
+            <select id="donation-token" class="token-dropdown"></select>
+          </div>
+        </div>
+        
+        <button id="process-donation-btn" class="action-btn pulse-action">Send Donation</button>
+        <div id="tx-status" class="tx-status-text hidden-element">Initializing...</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="article-modal" class="modal-overlay hidden-modal">
+    <div class="modal-content article-content">
+      <span class="close-modal" id="close-article-modal">&times;</span>
+      
+      <div class="article-header">
+        <img id="article-hero-img" src="" alt="Article Hero">
+        <div class="article-hero-text">
+          <span id="article-tag">Category</span>
+          <h1 id="article-title">Article Title</h1>
+        </div>
+      </div>
+      
+      <div id="article-body" class="article-body">
+        </div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+          </html>
+          
